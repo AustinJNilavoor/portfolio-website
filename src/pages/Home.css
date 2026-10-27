@@ -22,15 +22,18 @@
     min-height: 0;
   }
 }
+
 @supports (height: 100dvh) {
   @media (min-width: 1024px) {
     .hero {
       height: 100dvh;
     }
   }
+
   .hero {
     min-height: 100dvh;
   }
+
   @media (min-width: 1024px) {
     .hero {
       min-height: 0;
@@ -56,9 +59,11 @@
   width: 50%;
   overflow: hidden;
 }
+
 .bg-half.left {
   left: 0;
 }
+
 .bg-half.right {
   right: 0;
 }
@@ -73,9 +78,11 @@
   overflow: visible;
   shape-rendering: geometricPrecision;
 }
+
 .bg-half.left svg {
   left: 0;
 }
+
 .bg-half.right svg {
   right: 0;
 }
@@ -87,12 +94,10 @@
   z-index: 1;
   pointer-events: none;
   background:
-    radial-gradient(
-      ellipse 65% 75% at 40% 50%,
+    radial-gradient(ellipse 65% 75% at 40% 50%,
       rgba(255, 255, 255, 0.78) 0%,
       rgba(255, 255, 255, 0.45) 70%,
-      rgba(255, 255, 255, 0.2) 100%
-    ),
+      rgba(255, 255, 255, 0.2) 100%),
     rgba(252, 252, 251, var(--veil-opacity));
 }
 
@@ -105,15 +110,18 @@
   stroke-linejoin: round;
   opacity: 0.75;
 }
+
 .bg-half .bg-line.thin {
   stroke-width: 0.8;
   opacity: 0.6;
 }
+
 .bg-half .bg-line.light {
   stroke: #c9cdc8;
   stroke-width: 1.2;
   opacity: 0.85;
 }
+
 .bg-half .bg-line.dotted {
   stroke: #8c928c;
   stroke-width: 1.8;
@@ -124,26 +132,32 @@
 .bg-half .node {
   fill: #6e786f;
 }
+
 .bg-half .node.big {
   fill: #6a7a6c;
 }
+
 .bg-half .node.dark {
   fill: #2d312d;
 }
+
 .bg-half .node-grey {
   fill: #b9beb8;
   stroke: #9aa09a;
   stroke-width: 0.8;
 }
+
 .bg-half .node-open {
   fill: #fff;
   stroke: #7d847d;
   stroke-width: 1;
 }
+
 .bg-half .node-open.sm {
   stroke-width: 0.9;
   opacity: 0.9;
 }
+
 .bg-half .dot {
   fill: #7f867f;
 }
@@ -162,11 +176,13 @@
   stroke: #9ca29c;
   stroke-width: 0.9;
 }
+
 .bg-half .sq-fill {
   fill: #7f8e80;
   stroke: #6e7d6f;
   stroke-width: 0.6;
 }
+
 .bg-half .sq-light {
   fill: #e1e4e0;
   stroke: #c6cac5;
@@ -179,6 +195,7 @@
   stroke-width: 9;
   stroke-linecap: butt;
 }
+
 .bg-half .wave {
   fill: none;
   stroke: #5f665f;
@@ -192,11 +209,13 @@
   stroke: #5d645d;
   stroke-width: 1.6;
 }
+
 .bg-half .chip-die {
   fill: #f1f3f0;
   stroke: #8a918a;
   stroke-width: 1;
 }
+
 .bg-half .pin {
   fill: #fff;
   stroke: #6a716a;
@@ -211,23 +230,24 @@
   .bg-half svg {
     height: min(100%, 780px);
   }
+
   .bg-half.left svg {
     top: 0;
     left: 0;
   }
+
   .bg-half.right svg {
     top: auto;
     bottom: 0;
     right: 0;
   }
+
   .bg-veil {
     background:
-      radial-gradient(
-        ellipse 90% 70% at 50% 40%,
+      radial-gradient(ellipse 90% 70% at 50% 40%,
         rgba(255, 255, 255, 0.82) 0%,
         rgba(255, 255, 255, 0.5) 70%,
-        rgba(255, 255, 255, 0.25) 100%
-      ),
+        rgba(255, 255, 255, 0.25) 100%),
       rgba(252, 252, 251, var(--veil-opacity));
   }
 }
@@ -238,6 +258,10 @@
   z-index: 2;
   flex: 0 0 auto;
   padding-bottom: clamp(0.75rem, 2.4vh, 1.5rem);
+}
+
+.container.hero-pillars {
+  padding-bottom: clamp(1.75rem, 2.4vh, 1.5rem);
 }
 
 .pillars {
@@ -251,11 +275,13 @@
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
+
 @media (min-width: 640px) {
   .pillars {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (min-width: 1024px) {
   .pillars {
     grid-template-columns: repeat(4, 1fr);
@@ -273,15 +299,18 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   transition: border-color 0.2s;
 }
+
 .pillar:hover {
   border-color: var(--sage);
 }
+
 .pillar-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: clamp(0.4rem, 1.4vh, 0.85rem);
 }
+
 .pillar-label {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -289,6 +318,7 @@
   letter-spacing: 0.05em;
   color: var(--muted);
 }
+
 .pillar-icon {
   width: 1.6rem;
   height: 1.6rem;
@@ -299,10 +329,19 @@
   align-items: center;
   justify-content: center;
 }
-.pillar-title {
-  font-size: clamp(1rem, 2.4vh, 1.25rem);
-  font-weight: 700;
+
+.pillar-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: baseline;
 }
+
+.pillar-title {
+  font-size: clamp(1.55rem, 3.4vh, 1.85rem);
+  font-weight: 800;
+}
+
 .pillar-sub {
   margin-top: 0.2rem;
   font-family: var(--font-mono);
@@ -313,7 +352,7 @@
 /* short laptop screens: keep everything inside 100vh */
 @media (min-width: 1024px) and (max-height: 720px) {
   .pillar-sub {
-    display: none;
+    /* display: none; */
   }
 }
 
@@ -324,19 +363,24 @@
     gap: 0.5rem;
     padding: 0.5rem;
   }
+
   .pillar {
     padding: 0.75rem;
   }
+
   .pillar-title {
     font-size: 0.95rem;
   }
+
   .pillar-sub {
     font-size: 0.65rem;
   }
+
   .pillar-label {
     font-size: 9px;
   }
 }
+
 @media (max-width: 359px) {
   .pillars {
     grid-template-columns: 1fr;

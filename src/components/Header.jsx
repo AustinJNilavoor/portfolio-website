@@ -79,9 +79,7 @@ export default function Header() {
             <Icon name="mail" size={15} />
             <span>Get in Touch</span>
           </a>
-          <div className="user-dot hide-xs">
-            <Icon name="person" size={17} />
-          </div>
+
 
           {/* hamburger (mobile only) */}
           <button

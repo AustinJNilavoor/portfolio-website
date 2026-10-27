@@ -4,8 +4,13 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-route
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
 
 import "./App.css";
+import Experience from "./pages/Experience";
+import Projects from "./pages/Projects";
+import ProjectDemo from "./pages/Project_demo";
 
 /* Jump to top on route change (in-page #anchors are left alone) */
 function ScrollToTop() {
@@ -24,8 +29,12 @@ export default function App() {
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            {/* add more pages here, e.g. <Route path="/about" element={<About />} /> */}
+            <Route path="/" element={<><Home /><About /><Experience /> <Skills /></>} />
+            <Route path="/projects" element={<Projects />} />
+                   <Route
+          path="/projectdemo/:slug"
+          element={<ProjectDemo />}
+        />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

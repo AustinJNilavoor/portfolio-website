@@ -465,7 +465,7 @@ export default function Home() {
                   <Icon name={p.icon} size={16} />
                 </div>
               </div>
-              <div>
+              <div className="pillar-bottom">
                 <div className="pillar-title">{p.title}</div>
                 <div className="pillar-sub">{p.sub}</div>
               </div>
