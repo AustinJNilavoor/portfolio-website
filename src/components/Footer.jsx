@@ -7,14 +7,14 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-inner">
         <div className="footer-left">
-          <div className="status">
+          {/* <div className="status">
             <span className="pulse-dot" />
             <span>{FOOTER.status}</span>
-          </div>
+          </div> */}
           <p>{FOOTER.copy}</p>
         </div>
 
-        <div className="footer-links">
+        {/* <div className="footer-links">
           {FOOTER.links.map((l) => (
             <a
               key={l.label}
@@ -25,7 +25,7 @@ export default function Footer() {
               <span>{l.label}</span>
             </a>
           ))}
-        </div>
+        </div> */}
       </div>
     </footer>
   );

@@ -1,7 +1,3 @@
-/* ==================================================================
-   Austin J Quick — portfolio  ·  GLOBAL styles (tokens, base, shared)
-   Component styles live next to their components.
-   ================================================================== */
 
 :root {
   --charcoal: #242824;
@@ -44,7 +40,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fff;
-  color: var(--charcoal);
+  /* color: var(--charcoal); */
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   overscroll-behavior: none;

@@ -1,26 +1,27 @@
 import "./About.css";
-import { aboutData, icons } from "../data";
+import { aboutData } from "../data";
+import Icon from "../components/Icon";
 
-function Icon({ name, size = 20 }) {
-  return (
-    <svg
-      className="about__icon"
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      {(icons[name] || []).map((d, i) => (
-        <path key={i} d={d} />
-      ))}
-    </svg>
-  );
-}
+// function Icon({ name, size = 20 }) {
+//   return (
+//     <svg
+//       className="about__icon"
+//       width={size}
+//       height={size}
+//       viewBox="0 0 24 24"
+//       fill="none"
+//       stroke="currentColor"
+//       strokeWidth="2"
+//       strokeLinecap="round"
+//       strokeLinejoin="round"
+//       aria-hidden="true"
+//     >
+//       {(icons[name] || []).map((d, i) => (
+//         <path key={i} d={d} />
+//       ))}
+//     </svg>
+//   );
+// }
 
 export default function About() {
   const { label, heading, paragraphs, principles, focusAreas } = aboutData;

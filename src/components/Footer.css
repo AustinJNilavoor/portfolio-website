@@ -3,12 +3,14 @@
   width: 100%;
   border-top: 1px solid var(--border);
   background: #fff;
+  height: 30px;
+  align-content: center;
 }
 .footer-inner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: end;
   gap: 1.5rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;

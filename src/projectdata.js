@@ -1,8 +1,8 @@
 
 export const projectsData = {
-  label: "03 / SELECTED WORK",
+  label: "04 / SELECTED WORK",
 
-  heading: "Featured engineering case studies.",
+  heading: "Featured engineering projects.",
 
   subtitle:
     "Real-world applications showcasing clean code architecture, defensive persistence, and production-tested user interfaces.",
@@ -601,6 +601,129 @@ export const projectsData = {
             { name: "Player B", score: 18 },
           ],
         },
+      },
+    },
+  ],
+};
+export const hardwareProjectsData = {
+  groupTitle: "Hardware",
+  projects: [
+    {
+      id: "energy-meter",
+      kind: "IoT device · 2025",
+      title: "Smart Energy Meter",
+      summary: "ESP32 based meter that reports power usage in real time.",
+      description:
+        "A compact energy monitor that measures voltage, current and power factor, then streams readings to a dashboard over Wi-Fi.",
+      highlights: [
+        "Real-time power and units tracking",
+        "MQTT publishing to a cloud dashboard",
+        "Over-the-air firmware updates",
+        "Overload cut-off relay",
+      ],
+      stack: ["ESP32", "C++", "MQTT", "KiCad"],
+      links: [
+        { label: "Schematic", href: "#" },
+        { label: "Firmware", href: "#" },
+      ],
+      preview: {
+        type: "board",
+        title: "EM-01 rev B",
+        chip: "ESP32",
+        pins: ["3V3", "GND", "SDA", "SCL", "TX", "RX", "IO4", "IO5"],
+        leds: [
+          { label: "PWR", on: true },
+          { label: "WiFi", on: true },
+          { label: "ERR", on: false },
+        ],
+      },
+    },
+    {
+      id: "line-robot",
+      kind: "Robotics · 2024",
+      title: "Line Follower Robot",
+      summary: "PID controlled robot that tracks a line at speed.",
+      description:
+        "A two-wheel robot using an IR sensor array and a tuned PID loop to follow tracks, handle sharp turns and recover from lost lines.",
+      highlights: [
+        "8-channel IR sensor array",
+        "Tuned PID control loop",
+        "Bluetooth tuning from phone",
+        "Custom 2-layer PCB",
+      ],
+      stack: ["Arduino", "C", "PID", "Eagle"],
+      links: [
+        { label: "Build log", href: "#" },
+        { label: "Source", href: "#" },
+      ],
+      preview: {
+        type: "telemetry",
+        title: "Robot telemetry",
+        status: "Live",
+        channels: [
+          { label: "Speed", value: "0.8 m/s", level: 72 },
+          { label: "Line error", value: "0.4 cm", level: 18 },
+          { label: "Battery", value: "7.6 V", level: 85 },
+        ],
+      },
+    },
+    {
+      id: "weather-node",
+      kind: "Embedded · 2024",
+      title: "LoRa Weather Node",
+      summary: "Solar powered weather station with long range radio.",
+      description:
+        "A low power outdoor node reading temperature, humidity and pressure, sending data kilometres away over LoRa.",
+      highlights: [
+        "Months of battery life with deep sleep",
+        "LoRa link up to 3 km",
+        "Solar charging circuit",
+        "3D printed weatherproof case",
+      ],
+      stack: ["STM32", "LoRa", "BME280", "Fusion 360"],
+      links: [
+        { label: "Schematic", href: "#" },
+        { label: "Case files", href: "#" },
+      ],
+      preview: {
+        type: "board",
+        title: "WX-02 rev A",
+        chip: "STM32L0",
+        pins: ["VCC", "GND", "MOSI", "MISO", "SCK", "NSS", "DIO0", "RST"],
+        leds: [
+          { label: "PWR", on: true },
+          { label: "TX", on: false },
+          { label: "CHG", on: true },
+        ],
+      },
+    },
+    {
+      id: "motor-driver",
+      kind: "Power electronics · 2023",
+      title: "Dual Motor Driver",
+      summary: "10A H-bridge board with current sensing.",
+      description:
+        "A dual channel motor driver with onboard current sensing and thermal protection for hobby robotics and small automation.",
+      highlights: [
+        "10A per channel continuous",
+        "Current and temperature feedback",
+        "3.3V and 5V logic compatible",
+        "Reverse polarity protection",
+      ],
+      stack: ["MOSFETs", "Analog design", "Altium"],
+      links: [
+        { label: "Gerbers", href: "#" },
+        { label: "Datasheet", href: "#" },
+      ],
+      preview: {
+        type: "telemetry",
+        title: "Driver status",
+        status: "Idle",
+        channels: [
+          { label: "Motor A", value: "3.2 A", level: 32 },
+          { label: "Motor B", value: "5.1 A", level: 51 },
+          { label: "Temp", value: "46 °C", level: 46 },
+        ],
       },
     },
   ],

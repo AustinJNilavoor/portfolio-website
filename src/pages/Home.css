@@ -250,6 +250,14 @@
         rgba(255, 255, 255, 0.25) 100%),
       rgba(252, 252, 251, var(--veil-opacity));
   }
+
+  .container.hero-pillars {
+    padding-top: 20px;
+  }
+  .pillar-bottom{
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* ============================ PILLARS =========================== */
@@ -332,7 +340,7 @@
 
 .pillar-bottom {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   gap: 0.5rem;
   align-items: baseline;
 }
@@ -343,7 +351,7 @@
 }
 
 .pillar-sub {
-  margin-top: 0.2rem;
+  /* margin-top: 0.2rem; */
   font-family: var(--font-mono);
   font-size: 0.72rem;
   color: var(--secondary);
@@ -369,7 +377,7 @@
   }
 
   .pillar-title {
-    font-size: 0.95rem;
+    font-size: 1.4rem;
   }
 
   .pillar-sub {

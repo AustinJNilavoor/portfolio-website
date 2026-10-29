@@ -1,25 +1,7 @@
 import "./Skills.css";
-import { skillsData, icons } from "../data";
+import { skillsData } from "../data";
+import Icon from "../components/Icon";
 
-function Icon({ name, size = 20 }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      {(icons[name] || []).map((d, i) => (
-        <path key={i} d={d} />
-      ))}
-    </svg>
-  );
-}
 
 export default function Skills() {
   const { label, heading, subtitle, categories } = skillsData;

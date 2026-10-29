@@ -20,9 +20,8 @@ export const NAV = [
   { label: "Home", to: "/" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
+  { label: "Projects", to: "/projects" },
   { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export const ROLES = [
@@ -55,7 +54,7 @@ export const PILLARS = [
 
 export const FOOTER = {
   status: "STATUS // SYS_ONLINE · OPEN FOR CONTRACTS",
-  copy: "© 2024 Austin J Quick. Quiet software engineering & systems architecture.",
+  copy: "© 2026 Austin J. Quiet software engineering & systems architecture.",
   links: [
     { label: "GitHub", icon: "terminal", href: "https://github.com", external: true },
     { label: "LinkedIn", icon: "work", href: "https://linkedin.com", external: true },
@@ -70,28 +69,28 @@ export const FOOTER = {
 // Edit text, add/remove items, or swap icons without touching the components.
 
 // Inline SVG icon paths (24x24 viewBox, stroke-based). No external icon fonts needed.
-export const icons = {
-  tune: [
-    "M4 21v-7", "M4 10V3", "M12 21v-9", "M12 8V3", "M20 21v-5", "M20 12V3",
-    "M1 14h6", "M9 8h6", "M17 16h6",
-  ],
-  shield: ["M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z", "M9 12l2 2 4-4"],
-  speed: ["M12 14l4-4", "M3.34 19a10 10 0 1 1 17.32 0"],
-  devices: [
-    "M5 2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z",
-    "M12 18h.01",
-  ],
-  server: [
-    "M4 3h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z",
-    "M4 13h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2z",
-    "M6 7h.01", "M6 17h.01",
-  ],
-  hub: [
-    "M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z",
-    "M12 2v7", "M12 15v7", "M3 7l6 3.5", "M21 7l-6 3.5", "M3 17l6-3.5", "M21 17l-6-3.5",
-  ],
-  terminal: ["M4 17l6-6-6-6", "M12 19h8"],
-};
+// export const icons = {
+//   tune: [
+//     "M4 21v-7", "M4 10V3", "M12 21v-9", "M12 8V3", "M20 21v-5", "M20 12V3",
+//     "M1 14h6", "M9 8h6", "M17 16h6",
+//   ],
+//   shield: ["M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z", "M9 12l2 2 4-4"],
+//   speed: ["M12 14l4-4", "M3.34 19a10 10 0 1 1 17.32 0"],
+//   devices: [
+//     "M5 2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z",
+//     "M12 18h.01",
+//   ],
+//   server: [
+//     "M4 3h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z",
+//     "M4 13h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2z",
+//     "M6 7h.01", "M6 17h.01",
+//   ],
+//   hub: [
+//     "M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z",
+//     "M12 2v7", "M12 15v7", "M3 7l6 3.5", "M21 7l-6 3.5", "M3 17l6-3.5", "M21 17l-6-3.5",
+//   ],
+//   terminal: ["M4 17l6-6-6-6", "M12 19h8"],
+// };
 
 export const aboutData = {
   label: "01 / ABOUT",
@@ -132,50 +131,130 @@ export const aboutData = {
     },
   ],
 };
-
 export const skillsData = {
-  label: "02 / TOOLKIT",
+  label: "03 / TOOLKIT",
   heading: "Tools I use to build things.",
   subtitle:
-    "Technologies selected for runtime predictability, maintainability, and community strength. Grouped by architectural layer.",
+    "Technologies across application development, backend engineering, enterprise integration, embedded systems, and infrastructure.",
+
   categories: [
     {
       icon: "devices",
-      title: "Application Dev",
-      description: "Frontends built for responsiveness, accessibility, and zero lag.",
-      tier: "Client Edge",
-      skills: ["Flutter", "Dart", "React.js", "TypeScript", "HTML5", "Tailwind CSS"],
+      title: "Application Development",
+      description:
+        "Cross-platform mobile applications and modern, responsive web interfaces.",
+      tier: "Client Applications",
+      skills: [
+        "Flutter",
+        "Dart",
+        "React",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Provider / BLoC",
+      ],
     },
     {
       icon: "server",
       title: "Backend & APIs",
-      description: "Stateless services, transactional backbones, and event brokers.",
+      description:
+        "Backend services, distributed architectures, and reliable API communication.",
       tier: "Core Services",
-      skills: ["Java 21", "Spring Boot", "REST APIs", "PostgreSQL", "RabbitMQ", "Redis"],
+      skills: [
+        "Java",
+        "Spring Boot",
+        "Microservices",
+        "REST APIs",
+        "GraphQL",
+        "Node.js",
+        "RabbitMQ",
+      ],
     },
     {
       icon: "hub",
-      title: "Integration",
-      description: "Enterprise pipelines, message brokerage, and system sync.",
-      tier: "Enterprise Highway",
-      skills: ["SAP Integration", "MuleSoft", "Kafka Stream", "API Proxies", "SOAP/WSDL", "JSON Schema"],
+      title: "Integration Engineering",
+      description:
+        "Enterprise integration pipelines, message transformation, and system connectivity.",
+      tier: "Enterprise Integration",
+      skills: [
+        "SAP Integration Suite",
+        "MuleSoft",
+        "API Proxies",
+        "SOAP / WSDL",
+        "JSON Schema",
+      ],
+    },
+    {
+      icon: "database",
+      title: "Databases & Cloud",
+      description:
+        "Relational and NoSQL databases, cloud platforms, and application persistence.",
+      tier: "Data & Infrastructure",
+      skills: [
+        "SQL",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Firebase",
+        "Google Cloud",
+        "Redis",
+      ],
+    },
+    {
+      icon: "memory",
+      title: "Embedded Systems & Hardware",
+      description:
+        "Low-level programming, microcontrollers, hardware interfaces, and digital design.",
+      tier: "Hardware & Firmware",
+      skills: [
+        "C",
+        "C++",
+        "Embedded C",
+        "Arduino",
+        "ESP32",
+        "FreeRTOS",
+        "SPI / I2C / UART",
+        "Circuit & Schematic Design",
+        "SystemVerilog",
+        "Xilinx Vivado",
+      ],
     },
     {
       icon: "terminal",
-      title: "Systems & Tools",
-      description: "Hardware compilation, versioning, Unix toolchains, and handoff.",
-      tier: "Toolchain & HW",
-      skills: ["C++ 20", "Git CLI", "Linux / Bash", "Firebase", "Docker", "Figma"],
+      title: "Systems & Development Tools",
+      description:
+        "Version control, Linux environments, development utilities, and design workflows.",
+      tier: "Engineering Toolchain",
+      skills: [
+        "Git",
+        "GitHub",
+        "Linux CLI",
+        "Bash",
+        "Docker",
+        "VS Code",
+        "Postman",
+        "Figma",
+      ],
+    },
+    {
+      icon: "hub",
+      title: "Computer Science Fundamentals",
+      description:
+        "Problem-solving foundations, efficient algorithms, and object-oriented design.",
+      tier: "Core Concepts",
+      skills: [
+        "Data Structures & Algorithms",
+        "Object-Oriented Programming",
+      ],
     },
   ],
 };
-
 
 // dataexp.js — content for the Experience section.
 // Add a new object to `experiences` (newest first) to add another job to the timeline.
 
 export const experienceData = {
-  label: "04 / EXPERIENCE",
+  label: "02 / EXPERIENCE",
   heading: "Where I've worked.",
   subtitle:
     "Engineering roles focused on robust delivery, scalable microservice architectures, and cross-team integration.",

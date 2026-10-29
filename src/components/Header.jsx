@@ -7,7 +7,7 @@ import "./Header.css";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   const close = () => setOpen(false);
 
@@ -37,23 +37,58 @@ export default function Header() {
     return () => mq.removeEventListener("change", onChange);
   }, []);
 
-  const renderLink = (item, i, onClick) =>
-    item.to ? (
-      <NavLink
-        key={item.label}
-        to={item.to}
-        end
-        onClick={onClick}
-        className={({ isActive }) => (isActive ? "active" : "")}
-      >
-        {item.label}
-      </NavLink>
-    ) : (
+
+
+  const renderLink = (item, i, onClick) => {
+    if (item.to) {
+      return (
+        <NavLink
+          key={item.label}
+          to={item.to}
+          end
+          onClick={onClick}
+          className={({ isActive }) =>
+            isActive && (item.to !== "/" || !hash) ? "active" : ""
+          }
+        >
+          {item.label}
+        </NavLink>
+      );
+    }
+
+    if (item.href?.startsWith("#")) {
+      const isActive = pathname === "/" && hash === item.href;
+
+      return (
+        <Link
+          key={item.label}
+          to={`/${item.href}`}
+          onClick={onClick}
+          className={isActive ? "active" : ""}
+        >
+          {item.label}
+        </Link>
+      );
+    }
+
+    return (
       <a key={item.label} href={item.href} onClick={onClick}>
         {item.label}
       </a>
     );
+  };
+  useEffect(() => {
+    if (!hash) return;
 
+    const timeout = setTimeout(() => {
+      document.querySelector(hash)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
+
+    return () => clearTimeout(timeout);
+  }, [pathname, hash]);
   return (
     <header className={`site-header${open ? " is-open" : ""}`}>
       <div className="container header-inner">
