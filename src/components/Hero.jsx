@@ -8,7 +8,7 @@ import "./Hero.css";
 
 /* Put your photo at  public/austin.jpg  (served as /austin.jpg).
    If the file is missing, the silhouette below is shown instead. */
-const PORTRAIT_SRC = "/images/Austin.png";
+import PORTRAIT_SRC from "/images/Austin.png";
 
 function Avatar() {
   return (

@@ -46,6 +46,26 @@
 /* ---------------------------------------------------------------------
    SOFTWARE
    --------------------------------------------------------------------- */
+import project1Image from "/images/project_images/projects.png";
+import project2Image from "/images/project_images/wallet.jpg";
+import project3Image from "/images/project_images/inspection.png";
+import project4Image from "/images/project_images/score.png";
+import project5Image from "/images/project_images/bill.png";
+import project6Image from "/images/project_images/qa.png";
+import project7Image from "/images/project_images/zed.jpg";
+import project8Image from "/images/project_images/drone_1.jpg";
+import project9Image from "/images/project_images/linefolo_1.jpg";
+import project10Image from "/images/project_images/pidrone_1.jpg";
+import project11Image from "/images/project_images/placeholder.png";
+import project12Image from "/images/project_images/li-ion.png";
+import project13Image from "/images/project_images/placeholder.png";
+import project14Image from "/images/project_images/dimmer.jpg";
+import project15Image from "/images/project_images/current.jpg";
+import project16Image from "/images/project_images/eth.jpg";
+import project17Image from "/images/project_images/placeholder.png";
+import project18Image from "/images/project_images/placeholder.png";
+import digitalLockImage from "/images/project_images/placeholder.png";
+
 export const projectsData = {
   label: "04 / SELECTED WORK",
 
@@ -57,7 +77,7 @@ export const projectsData = {
   projects: [
     {
       id: "nucleus",
-      path: "/images/project_images/projects.png",
+      path: project1Image,
       kind: "Full-stack application",
       title: "Project Tracker",
       summary:
@@ -128,7 +148,7 @@ export const projectsData = {
 
     {
       id: "wallet",
-      path: "/images/project_images/wallet.jpg",
+      path: project2Image,
       kind: "Mobile application",
       title: "Wallet App",
       summary:
@@ -157,7 +177,7 @@ export const projectsData = {
 
     {
       id: "inspection",
-      path: "/images/project_images/inspection.png",
+      path: project3Image,
       kind: "Mobile application",
       title: "Factory Inspection App",
       summary:
@@ -186,7 +206,7 @@ export const projectsData = {
 
     {
       id: "scoretracker",
-      path: "/images/project_images/score.png",
+      path: project4Image,
       kind: "Mobile application",
       title: "Score Tracker",
       summary:
@@ -214,7 +234,7 @@ export const projectsData = {
 
     {
       id: "billsplitter",
-      path: "/images/project_images/bill.png",
+      path: project5Image,
       kind: "Web application",
       title: "Bill Splitter",
       summary:
@@ -243,7 +263,7 @@ export const projectsData = {
 
     {
       id: "qadocgenerator",
-      path: "/images/project_images/qa.png",
+      path: project6Image,
       kind: "Web application",
       title: "QA Doc Generator",
       summary:
@@ -285,7 +305,7 @@ export const hardwareProjectsData = {
   projects: [
     {
       id: "cgra-overlay",
-      path: "/images/project_images/zed.jpg",
+      path: project7Image,
       kind: "FPGA design",
       title: "CGRA Overlay Design for FPGA",
       summary: "A CGRA overlay architecture implemented on an FPGA board.",
@@ -308,7 +328,7 @@ export const hardwareProjectsData = {
 
     {
       id: "quadcopter",
-      path: "/images/project_images/drone_1.jpg",
+      path: project8Image,
       kind: "Drone",
       title: "Quadcopter",
       summary: "Quadcopter built around a KK2.1.5 flight controller.",
@@ -336,7 +356,7 @@ export const hardwareProjectsData = {
 
     {
       id: "line-follower",
-      path: "/images/project_images/linefolo_1.jpg",
+      path: project9Image,
       kind: "Robotics",
       title: "Line Follower",
       summary: "Robot that follows a line using sensors.",
@@ -358,7 +378,7 @@ export const hardwareProjectsData = {
 
     {
       id: "pidrone",
-      path: "/images/project_images/pidrone_1.jpg",
+      path: project10Image,
       kind: "Drone",
       title: "PiDrone",
       summary: "Quadcopter built from scratch on a Raspberry Pi Pico.",
@@ -387,7 +407,7 @@ export const hardwareProjectsData = {
 
     {
       id: "ticker",
-      path: "/images/project_images/placeholder.png",
+      path: project11Image,
       kind: "IoT device",
       title: "Crypto Ticker",
       summary: "ESP8266 device showing live cryptocurrency prices on an OLED.",
@@ -416,7 +436,7 @@ export const hardwareProjectsData = {
 
     {
       id: "liion-tester",
-      path: "/images/project_images/li-ion.png",
+      path: project12Image,
       kind: "Power electronics",
       title: "Li-ion Battery Capacity Tester",
       summary: "Measures Li-ion capacity with a controlled discharge current.",
@@ -444,7 +464,7 @@ export const hardwareProjectsData = {
 
     {
       id: "temperature-monitor",
-      path: "/images/project_images/drone.png",
+      path: project13Image,
       kind: "Embedded",
       title: "Temperature Monitor",
       summary: "Atmega328 and LM35 temperature display on a 16x2 LCD.",
@@ -471,7 +491,7 @@ export const hardwareProjectsData = {
 
     {
       id: "digital-lock",
-      path: "/images/project_images/placeholder.png",
+      path: digitalLockImage,
       kind: "Embedded",
       title: "Digital Lock",
       summary: "Electronic lock opened with a digital code.",
@@ -494,7 +514,7 @@ export const hardwareProjectsData = {
 
     {
       id: "led-dimmer",
-      path: "/images/project_images/dimmer.jpg",
+      path: project14Image,
       kind: "Analog electronics",
       title: "LED Dimmer",
       summary: "555 timer based 6 kHz PWM LED dimmer.",
@@ -521,7 +541,7 @@ export const hardwareProjectsData = {
 
     {
       id: "current-flowmeter",
-      path: "/images/project_images/current.jpg",
+      path: project15Image,
       kind: "Measurement",
       title: "Current FlowMeter",
       summary: "INA219 and Pico system that logs current flow to Excel.",
@@ -549,7 +569,7 @@ export const hardwareProjectsData = {
 
     {
       id: "eth-cable-tester",
-      path: "/images/project_images/eth.jpg",
+      path: project16Image,
       kind: "Analog / digital electronics",
       title: "Ethernet Cable Tester",
       summary: "555 and CD4017 tester that finds Ethernet wiring faults.",
@@ -578,7 +598,7 @@ export const hardwareProjectsData = {
 
     {
       id: "esp-drone",
-      path: "/images/esp-drone.png",
+      path: project17Image,
       kind: "Drone",
       title: "ESP Drone",
       summary: "Quadcopter built around an ESP microcontroller.",
@@ -601,7 +621,7 @@ export const hardwareProjectsData = {
 
     {
       id: "bike-nav",
-      path: "/images/bike-nav.png",
+      path: project18Image,
       kind: "Embedded",
       title: "Bike NAV System",
       summary: "Navigation display for a bike.",
