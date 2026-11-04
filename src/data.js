@@ -9,7 +9,7 @@ export const PROFILE = {
   title: "SOFTWARE ENGINEER",
   greeting: "Hello, I'm ",
   availability: "OPEN TO OPPORTUNITIES",
-  email: "austin@example.com",
+  email: "austinjnilavoor1@gmail.com",
   imageAlt: "Austin J Nilavoor, Software Engineer in modern technical workspace",
   lead:
     "I build reliable digital solutions and turn complex problems into simple experiences. Bridging mobile applications, backend systems, and embedded hardware through thoughtful engineering.",
@@ -32,9 +32,9 @@ export const ROLES = [
 ];
 
 export const SOCIALS = [
-  { label: "GitHub Profile", icon: "terminal", href: "https://github.com", external: true },
-  { label: "LinkedIn Profile", icon: "work", href: "https://linkedin.com", external: true },
-  { label: "Email Austin", icon: "at", href: "mailto:austin@example.com" },
+  { label: "GitHub Profile", icon: "terminal", href: "https://github.com/AustinJNilavoor", external: true },
+  { label: "LinkedIn Profile", icon: "work", href: "https://in.linkedin.com/in/austinjnilavoor", external: true },
+  { label: "Email Austin", icon: "at", href: "mailto:austinjnilavoor1@gmail.com" },
   { label: "Download Resume", icon: "description", href: "#" },
 ];
 
@@ -54,7 +54,7 @@ export const PILLARS = [
 
 export const FOOTER = {
   status: "STATUS // SYS_ONLINE · OPEN FOR CONTRACTS",
-  copy: "© 2026 Austin J. Quiet software engineering & systems architecture.",
+  copy: "© 2026 Austin J Nilavoor. All rights reserved.",
   links: [
     { label: "GitHub", icon: "terminal", href: "https://github.com", external: true },
     { label: "LinkedIn", icon: "work", href: "https://linkedin.com", external: true },

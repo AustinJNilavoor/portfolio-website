@@ -149,6 +149,29 @@ function Preview({ preview }) {
       return null;
   }
 }
+import { Link } from "react-router-dom";
+
+const isInternal = (href) => href.startsWith("/");
+
+function ProjectLink({ href, label, className }) {
+  if (isInternal(href)) {
+    return (
+      <Link to={href} className={className}>
+        {label}
+      </Link>
+    );
+  }
+  const external = href.startsWith("http");
+  return (
+    <a
+      href={href}
+      className={className}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+    >
+      {label}
+    </a>
+  );
+}
 
 /* ---------- Detail panel (used in the sticky aside and in the mobile modal) ---------- */
 function Detail({ project, dir = "none" }) {
@@ -181,13 +204,12 @@ function Detail({ project, dir = "none" }) {
 
         <div className="projects__links">
           {project.links.map((l, i) => (
-            <a
+            <ProjectLink
               key={l.label}
               href={l.href}
+              label={l.label}
               className={i === 0 ? "projects__btn projects__btn--primary" : "projects__btn"}
-            >
-              {l.label}
-            </a>
+            />
           ))}
         </div>
       </div>
@@ -234,9 +256,16 @@ export default function Projects() {
   const closeBtnRef = useRef(null);
   const triggerRef = useRef(null);
   const asideRef = useRef(null);
+  const historyPushed = useRef(false); // true while our modal history entry exists
 
   const active = all.find((p) => p.key === selectedKey) || all[0];
-
+  const closeModal = () => {
+    if (historyPushed.current) {
+      window.history.back(); // popstate handler below does the actual closing
+    } else {
+      setModalOpen(false);
+    }
+  };
   /* start each newly selected preview from its top */
   useEffect(() => {
     if (asideRef.current) asideRef.current.scrollTop = 0;
@@ -276,16 +305,25 @@ export default function Projects() {
   /* ----- modal: Esc to close, lock body scroll, focus handling ----- */
   useEffect(() => {
     if (!showModal) return undefined;
+
     const onKey = (e) => {
-      if (e.key === "Escape") setModalOpen(false);
+      if (e.key === "Escape") closeModal();
     };
+    const onPop = () => {
+      historyPushed.current = false;
+      setModalOpen(false);
+    };
+
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     document.addEventListener("keydown", onKey);
+    window.addEventListener("popstate", onPop);
     closeBtnRef.current?.focus();
+
     return () => {
       document.body.style.overflow = prevOverflow;
       document.removeEventListener("keydown", onKey);
+      window.removeEventListener("popstate", onPop);
       triggerRef.current?.focus?.();
     };
   }, [showModal]);
@@ -297,6 +335,8 @@ export default function Projects() {
     setSelectedKey(project.key);
     if (!isDesktop) {
       triggerRef.current = e.currentTarget;
+      window.history.pushState({ ...window.history.state, projectModal: true }, "");
+      historyPushed.current = true;
       setModalOpen(true);
     }
   };
@@ -332,11 +372,17 @@ export default function Projects() {
               aria-haspopup={isDesktop ? undefined : "dialog"}
               onClick={(e) => selectProject(p, e)}
             >
-              <span className="projects__row-kind">{p.kind}</span>
-              <span className="projects__row-title">{p.title}</span>
-              <span className="projects__row-summary">{p.summary}</span>
-              <span className="projects__row-cta" aria-hidden="true">
-                Preview →
+              <span className="projects__row-media">
+                {p.path && <img src={p.path} alt="" loading="lazy" />}
+              </span>
+
+              <span className="projects__row-text">
+                <span className="projects__row-kind">{p.kind}</span>
+                <span className="projects__row-title">{p.title}</span>
+                <span className="projects__row-summary">{p.summary}</span>
+                <span className="projects__row-cta" aria-hidden="true">
+                  Preview →
+                </span>
               </span>
             </button>
           </li>
@@ -395,7 +441,7 @@ export default function Projects() {
           className="projects__modal"
           role="presentation"
           onClick={(e) => {
-            if (e.target === e.currentTarget) setModalOpen(false);
+            if (e.target === e.currentTarget) closeModal();
           }}
         >
           <div
@@ -409,7 +455,7 @@ export default function Projects() {
               className="projects__modal-close"
               ref={closeBtnRef}
               aria-label="Close preview"
-              onClick={() => setModalOpen(false)}
+              onClick={closeModal}
             >
               ×
             </button>

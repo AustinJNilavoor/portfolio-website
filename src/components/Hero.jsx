@@ -56,7 +56,7 @@ export default function Hero() {
         <p className="lead">{PROFILE.lead}</p>
 
         <div className="cta-row">
-          <a className="btn-large btn-solid group" href="#projects">
+          <a className="btn-large btn-solid group" href="/projects">
             <span>View My Work</span>
             <Icon name="arrow" size={18} className="arrow" />
           </a>
